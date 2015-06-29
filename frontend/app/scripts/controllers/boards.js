@@ -1,15 +1,8 @@
 'use strict';
 
 angular.module('frontendApp')
-    .controller('BoardsController', function($scope) {
-        $scope.boards = [
-            {
-                shortname: 'b',
-                description: 'Random'
-            },
-            {
-                shortname: 'd',
-                description: 'Die in Hell'
-            }
-        ];
+    .controller('BoardsController', function($scope, Board) {
+        Board.query(function(data) {
+            $scope.boards = data;
+        });
     });
