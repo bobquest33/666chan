@@ -1,6 +1,10 @@
 from flask import Flask
-from config import DevelopmentConfig
+from flask.ext.sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
-app.config.from_object(DevelopmentConfig)
+app.config.from_object(os.environ['APP_SETTINGS'])
+db = SQLAlchemy(app)
 from app import views
+
+from .models import Board
