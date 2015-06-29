@@ -25,9 +25,10 @@
 </div>
 
 <h2>Board List</h2>
-<div class="row marketing" ng-controller="BoardsController">
-  <div ng-repeat="board in boards">
-    <div class="col-md-1">{{board.shortname}}</div>
-    <div>{{board.description}}</div>
+<div class="container-fluid" ng-controller="BoardsController">
+  <div class="row" ng-repeat="board in boards">
+    <div class="col-md-1 col-xs-1">{{board.shortname}}</div>
+    <div class="col-md-2 col-xs-2">{{board.name}}</div>
+    <div class="col-md-6 col-xs-6">{{board.description}}</div>
   </div>
 </div>
