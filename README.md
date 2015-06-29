@@ -13,3 +13,6 @@ A good way to have those variables set in development is to add `export` directi
 ##Dependencies
 
 All dependencies are listed in the `backend/requirements.txt` file, which can be used to run `pip install -r backend/requirements.txt`.
+
+##Database
+Run `./manage.py db init` and then `./manage.py db upgrade` from the `backend` directory to get the database up and running.
