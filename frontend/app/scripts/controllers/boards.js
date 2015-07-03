@@ -8,6 +8,11 @@ angular.module('frontendApp')
 
         $scope.board = new Board();
         $scope.addBoard = function(board) {
-            $scope.board.$save(function() {});
+            var new_board = angular.copy($scope.board);
+            $scope.board.$save(function(u, headers) {
+                if (u.status == "okay") {
+                    $scope.boards.push(new_board);
+                }
+            });
         };
     });
