@@ -7,12 +7,8 @@
 
 <div class ng-controller="BoardsController">
 
-  <div class="container" ng-if="error.length > 0">
-    <div class="row">
-      <div class="col-xs-10 col-md-10">
-        {{error}}
-      </div>
-    </div>
+  <div class="bg-danger" ng-if="error.length > 0">
+      <p>{{error}}</p>
   </div>
 
     <div class="container">
